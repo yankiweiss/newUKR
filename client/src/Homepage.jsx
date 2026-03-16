@@ -1,31 +1,73 @@
-import logo from './assets/Full-Logo-01.png';
+import logo from "./assets/Full-Logo-01.png";
 
-function Homepage () {
-    return (
+import { VscSearch } from "react-icons/vsc";
+
+function Homepage() {
+  return (
     <>
+      <div className="home-page">
+        <section>
+          <div className="logo-container">
+            <img src={logo} className="logo" alt="logo"></img>
+          </div>
+        </section>
 
-    <div className='home-page'>
+        <h1 className="sub-title">kosher bungalows that fit your needs</h1>
 
-   <section>
+        <div className="select-container">
+          <div className="select">
+            <span className="select-text">AREA</span>
+            <select>
+              <option>ok</option>
+              <option>ok</option>
+              <option>ok</option>
+            </select>
+          </div>
 
-    <div className='logo-container'>
+          <div className="select">
+            <span className="select-text">FROM</span>
+            <select>
+              <option>ok</option>
+              <option>ok</option>
+              <option>ok</option>
+            </select>
+          </div>
 
-    <img src={logo} className='logo' alt='logo'></img>
-    </div>
-   </section>
+          <div className="select">
+            <span className="select-text">UNTIL</span>
+            <select>
+              <option>ok</option>
+              <option>ok</option>
+              <option>ok</option>
+            </select>
+          </div>
 
-   <h1 className='sub-title'>kosher bungalows that fit your needs</h1>
+          <div className="select">
+            <span className="select-text">BEDS</span>
+            <select>
+              <option>ok</option>
+              <option>ok</option>
+              <option>ok</option>
+            </select>
+          </div>
 
-   </div>
+          <div className="select">
+            <span className="select-text">BATHS</span>
+            <select>
+              <option>ok</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-    <div className='home-page'>
+      <div>
+        <VscSearch />
 
-   
+      </div>
 
-   </div>
-    
+      <div className="home-page"></div>
     </>
-    )
+  );
 }
 
 export default Homepage;
