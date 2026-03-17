@@ -2,6 +2,9 @@ import logo from "./assets/Full-Logo-01.png";
 
 import { VscSearch } from "react-icons/vsc";
 
+
+//challenge: how to have the subtitle heading been one letter at a time;
+
 function Homepage() {
   return (
     <>
@@ -57,13 +60,18 @@ function Homepage() {
               <option>ok</option>
             </select>
           </div>
+        
         </div>
-      </div>
 
-      <div>
+           <div className="search-icon">
         <VscSearch />
 
       </div>
+
+       
+      </div>
+
+      
 
       <div className="home-page"></div>
     </>

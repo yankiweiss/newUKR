@@ -1,63 +1,126 @@
-.home-page{
+:root {
+  --main-color: orangered;
+}
+
+.home-page {
   background-image: url('./assets/Website_Background\ \(1\).jpg');
   background-size: cover;
   height: 100vh;
 }
-.logo{
-  max-width: 550px; 
+
+.logo {
+  max-width: 550px;
 }
-.logo-container{
+
+.logo-container {
   display: flex;
   justify-content: center;
   padding-top: 25px;
 }
-.sub-title{
+
+.sub-title {
   color: rgba(138, 37, 0, 0.432);
   font-size: 75px;
   text-align: center;
   margin-top: 125px;
 }
 
-.select-container{
-  
+.select-container {
   display: flex;
   gap: 30px;
   justify-content: center;
   margin-top: 200px;
 }
-select{
+
+select {
   width: 74%;
   border: none;
   outline: none;
-    padding: 10px;
-    border-top-right-radius: 8px;
+  padding: 10px;
+  border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: transparent;
-  
- 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
 }
 
-.select{
- 
+
+
+.select {
   width: 245px;
   border-radius: 5px;
-  border: 1px solid orangered;
+  border: 1px solid var(--main-color);
   display: flex;
   align-items: center;
-  
-   
-
 }
-select option{
-  color: orangered;
-  text-align: center;
-  
 
-}
-.select-text{
+select option {
   color: white;
-  background-color: orangered;
+  text-align: center;
+
+}
+
+/*
+Source - https://stackoverflow.com/a/42068921
+Posted by Renato Camargos
+Retrieved 2026-03-16, License - CC BY-SA 3.0
+*/
+
+
+
+.select-text {
+  color: white;
+  background-color: var(--main-color);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   padding: 10px;
+
+}
+
+.search-icon {
+  color: var(--main-color);
+  font-size: 75px;
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 380px) {
+
+  .logo {
+    width: 250px;
+  }
+
+  .sub-title {
+    color: rgba(138, 37, 0, 0.432);
+    font-size: 30px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .select {
+    width: 245px;
+    border-radius: 5px;
+    border: 1px solid var(--main-color);
+    display: flex;
+    align-items: center;
+  }
+
+  .select-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
+
+
+
 }
