@@ -23,7 +23,7 @@ function Homepage() {
       if (i < subtitle.length - 1) {
         timeOutID = setTimeout(
           () => typeItOut(i + 1),
-          200,
+          100,
         );
       }
     }
@@ -42,7 +42,7 @@ function Homepage() {
           </div>
         </section>
 
-        <h1 className="sub-title" ref={subtitleInnerText}></h1>
+        <h1 className="sub-title" ref={subtitleInnerText} aria-hidden="true">kosher bungalows that fit your needs.</h1>
 
         <div className="select-container">
           <div className="select">
