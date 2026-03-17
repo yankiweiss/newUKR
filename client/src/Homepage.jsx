@@ -1,11 +1,38 @@
 import logo from "./assets/Full-Logo-01.png";
+import { useEffect, useRef } from "react";
 
 import { VscSearch } from "react-icons/vsc";
-
 
 //challenge: how to have the subtitle heading been one letter at a time;
 
 function Homepage() {
+  const subtitleInnerText = useRef("");
+
+  useEffect(() => {
+    let timeOutID;
+    let subtitleText = subtitleInnerText.current;
+
+    const subtitle = "kosher bungalows that fit your needs.";
+
+    function typeItOut(i = 0) {
+        if(i === 0) {
+            subtitleText.textContent = '';
+        }
+      subtitleText.textContent += subtitle[i];
+
+      if (i < subtitle.length - 1) {
+        timeOutID = setTimeout(
+          () => typeItOut(i + 1),
+          200,
+        );
+      }
+    }
+
+    typeItOut();
+
+    return () => clearTimeout(timeOutID);
+  }, []);
+
   return (
     <>
       <div className="home-page">
@@ -15,7 +42,7 @@ function Homepage() {
           </div>
         </section>
 
-        <h1 className="sub-title">kosher bungalows that fit your needs</h1>
+        <h1 className="sub-title" ref={subtitleInnerText}></h1>
 
         <div className="select-container">
           <div className="select">
@@ -60,18 +87,12 @@ function Homepage() {
               <option>ok</option>
             </select>
           </div>
-        
         </div>
 
-           <div className="search-icon">
-        <VscSearch />
-
+        <div className="search-icon">
+          <VscSearch />
+        </div>
       </div>
-
-       
-      </div>
-
-      
 
       <div className="home-page"></div>
     </>
